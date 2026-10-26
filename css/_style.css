@@ -1,0 +1,1906 @@
+:root {
+    --noir: #070707;
+    --obsidian: #11100f;
+    --espresso: #241914;
+    --bronze: #6d503d;
+    --champagne: #c8a572;
+    --oldgold: #a9854f;
+    --ivory: #f7f2e9;
+    --porcelain: #fffdf9;
+    --taupe: #cfc3b4;
+    --ink: #201a17;
+    --white: #fff;
+    --serif: Georgia, serif
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    background: var(--ivory);
+    color: var(--ink);
+    font-family: Arial, sans-serif;
+    line-height: 1.7
+}
+
+.demo {
+    padding: 6px;
+    background: var(--teal);
+    color: #fff;
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: .16em;
+    font-weight: bold
+}
+
+header {
+    height: 82px;
+    padding: 0 4vw;
+    background: var(--navy);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 20
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: inherit;
+    text-decoration: none
+}
+
+.logo i {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font: italic 1.4rem var(--serif)
+}
+
+.logo span {
+    font: 1.05rem var(--serif);
+    letter-spacing: .17em
+}
+
+.logo small {
+    display: block;
+    color: var(--aqua);
+    font: 8px Arial;
+    letter-spacing: .2em
+}
+
+.menu {
+    display: none;
+    color: #fff;
+    background: none;
+    border: 0
+}
+
+nav {
+    display: flex;
+    gap: 18px
+}
+
+nav a,
+.headerCta {
+    color: #fff;
+    text-decoration: none;
+    font-size: .56rem;
+    letter-spacing: .11em
+}
+
+.headerCta {
+    padding: 11px 14px;
+    border: 1px solid var(--jade)
+}
+
+.hero,
+.pageHero,
+.city {
+    height: calc(100vh - 105px);
+    min-height: 650px;
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center
+}
+
+.hero>img,
+.pageHero>img,
+.city>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.shade,
+.hero:after,
+.pageHero:after,
+.city:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #07161df2, #0b2228c2 48%, transparent)
+}
+
+.heroCopy,
+.pageHero>div,
+.city>div {
+    position: relative;
+    z-index: 1;
+    margin-left: 8vw;
+    max-width: 760px
+}
+
+.heroCopy>p,
+.pageHero p,
+.eyebrow,
+.catalogHero>p,
+.category p {
+    color: var(--aqua);
+    text-transform: uppercase;
+    letter-spacing: .23em;
+    font-size: .68rem
+}
+
+.hero h1,
+.pageHero h1,
+.intro h2,
+.city h2,
+.editorial h2,
+.category h1,
+.contact h1,
+.catalogHero h1 {
+    font: clamp(3.7rem, 7vw, 7rem)/.9 var(--serif);
+    margin: .18em 0
+}
+
+.hero h1 em {
+    font-weight: normal;
+    color: #b9ddd7
+}
+
+.heroCopy>span {
+    display: block;
+    max-width: 560px;
+    margin: 25px 0
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 18px;
+    text-decoration: none;
+    font-size: .65rem;
+    letter-spacing: .1em;
+    margin-right: 9px
+}
+
+.btn.teal {
+    background: var(--teal);
+    color: #fff
+}
+
+.btn.ghost {
+    border: 1px solid var(--aqua);
+    color: #fff
+}
+
+.btn.dark {
+    background: var(--navy);
+    color: #fff
+}
+
+.manifesto {
+    background: var(--deep);
+    color: #fff;
+    padding: 25px 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: .66rem;
+    letter-spacing: .18em
+}
+
+.manifesto i {
+    width: 5px;
+    height: 5px;
+    background: var(--gold);
+    border-radius: 50%
+}
+
+.section {
+    padding: 100px 7vw
+}
+
+.intro,
+.editorial {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8vw;
+    align-items: center
+}
+
+.intro img {
+    width: 100%;
+    height: 650px;
+    object-fit: cover
+}
+
+.textLink {
+    color: var(--teal);
+    text-decoration: none;
+    border-bottom: 1px solid var(--teal)
+}
+
+.portals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background: var(--navy);
+    padding: 10px
+}
+
+.portals a {
+    height: 74vh;
+    position: relative;
+    overflow: hidden;
+    color: #fff
+}
+
+.portals img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.portals a:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent, #07161de8)
+}
+
+.portals div {
+    position: absolute;
+    z-index: 1;
+    left: 35px;
+    bottom: 30px
+}
+
+.portals small {
+    color: var(--aqua)
+}
+
+.portals h2 {
+    font: 4rem var(--serif);
+    margin: 0
+}
+
+.wide img {
+    width: 100%;
+    height: 78vh;
+    object-fit: cover
+}
+
+.catalogHero {
+    padding: 100px 7vw 70px;
+    background: linear-gradient(135deg, var(--navy), var(--teal), var(--jade));
+    color: #fff
+}
+
+.catalogHero span {
+    color: #d7e7e4
+}
+
+.catalogArea,
+.filtered {
+    padding: 70px 5vw 100px
+}
+
+.tools {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--sand);
+    padding-bottom: 25px
+}
+
+.tools input {
+    flex: 1;
+    min-width: 260px;
+    padding: 14px
+}
+
+.tools select {
+    padding: 13px
+}
+
+#filters {
+    display: flex;
+    gap: 6px
+}
+
+#filters button {
+    padding: 9px;
+    border: 1px solid var(--sand);
+    background: transparent
+}
+
+#filters button.active {
+    background: var(--teal);
+    color: #fff
+}
+
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 12px;
+    margin-top: 25px
+}
+
+.photo {
+    position: relative;
+    aspect-ratio: 1/1.12;
+    overflow: hidden;
+    background: #ddd6c9;
+    cursor: pointer
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--navy);
+    color: #fff;
+    padding: 6px;
+    font-size: .55rem
+}
+
+.metaCard {
+    padding: 12px 3px
+}
+
+.metaCard small {
+    color: var(--teal);
+    text-transform: uppercase
+}
+
+.metaCard h2 {
+    font: 1.25rem var(--serif);
+    margin: 5px 0
+}
+
+.metaCard button {
+    float: right;
+    border: 0;
+    background: none;
+    text-decoration: underline
+}
+
+.category {
+    height: 72vh;
+    padding: 7vw;
+    display: flex;
+    align-items: end;
+    color: #fff;
+    background-size: cover;
+    background-position: center
+}
+
+.category.jewelry {
+    background-image: linear-gradient(#07161d44, #07161ddb), url('../assets/images/sculptural.jpg')
+}
+
+.category.watches {
+    background-image: linear-gradient(#07161d44, #07161ddb), url('../assets/images/watches.jpg')
+}
+
+.serviceGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--jade)
+}
+
+.serviceGrid article {
+    background: var(--ivory);
+    padding: 60px
+}
+
+.serviceGrid b {
+    color: var(--teal)
+}
+
+.serviceGrid h2 {
+    font: 2.3rem var(--serif)
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: calc(100vh - 105px)
+}
+
+.contact>div {
+    padding: 80px 7vw
+}
+
+.contact>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.contact dt {
+    color: var(--teal);
+    font-size: .65rem;
+    margin-top: 18px
+}
+
+.contact dd {
+    margin: 4px 0;
+    font: 1.15rem var(--serif);
+    white-space: pre-line
+}
+
+.contact a {
+    color: inherit
+}
+
+.notice {
+    color: #65787b;
+    font-size: .8rem
+}
+
+footer {
+    padding: 40px 5vw;
+    background: var(--navy);
+    color: var(--aqua);
+    display: grid;
+    grid-template-columns: 1.3fr .7fr 1fr 1fr;
+    gap: 30px;
+    font-size: .7rem
+}
+
+footer>div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px
+}
+
+footer a {
+    color: var(--aqua)
+}
+
+dialog {
+    border: 0;
+    padding: 0;
+    background: var(--ivory);
+    width: min(980px, 94vw)
+}
+
+dialog::backdrop {
+    background: #07161ddd
+}
+
+.close {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    border: 0;
+    background: none;
+    font-size: 2rem
+}
+
+.modalGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr
+}
+
+.modalGrid img {
+    width: 100%;
+    height: 610px;
+    object-fit: cover
+}
+
+.modalGrid>div {
+    padding: 55px 40px
+}
+
+.modalGrid h2 {
+    font: 3rem var(--serif)
+}
+
+.modalGrid dl div {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 11px 0
+}
+
+.modalGrid dd {
+    margin: 0
+}
+
+.modalGrid small {
+    display: block;
+    color: #65787b;
+    margin-top: 18px
+}
+
+#count {
+    margin: 20px 0;
+    color: var(--teal)
+}
+
+#empty {
+    display: none
+}
+
+/* ==========================================================
+   HPRAM JEWELRY
+   Premium Mobile Navigation
+   ========================================================== */
+
+@media (max-width: 1000px) {
+
+    /* ------------------------------------------
+       HEADER
+       ------------------------------------------ */
+
+    header {
+        position: relative;
+        z-index: 9999;
+    }
+
+    .headerCta {
+        display: none;
+    }
+
+
+    /* ------------------------------------------
+       MENU BUTTON
+       Manteniamo il tuo <button>MENU</button>
+       ------------------------------------------ */
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+        z-index: 10002;
+
+        width: auto;
+        height: 42px;
+
+        padding: 0 16px;
+
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 100px;
+
+        background: rgba(255, 255, 255, 0.025);
+
+        color: rgba(255, 255, 255, 0.92);
+
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+
+        cursor: pointer;
+
+        -webkit-tap-highlight-color: transparent;
+
+        transition:
+            color 0.35s ease,
+            border-color 0.35s ease,
+            background 0.35s ease;
+    }
+
+    .menu:hover {
+        color: #d8bd89;
+        border-color: rgba(216, 189, 137, 0.45);
+        background: rgba(216, 189, 137, 0.05);
+    }
+
+
+    /* ------------------------------------------
+       FULLSCREEN NAV
+       ------------------------------------------ */
+
+    header nav {
+        counter-reset: hpram-nav;
+
+        display: flex;
+
+        position: fixed;
+        inset: 0;
+
+        z-index: 10000;
+
+        width: 100%;
+        height: 100dvh;
+
+        box-sizing: border-box;
+
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+
+        gap: 0;
+
+        padding:
+            max(100px, env(safe-area-inset-top))
+            clamp(26px, 7vw, 52px)
+            max(35px, env(safe-area-inset-bottom));
+
+        /*
+         * Fondo luxury:
+         * quasi nero con leggerissimi riflessi champagne
+         */
+        background:
+            radial-gradient(
+                circle at 90% 8%,
+                rgba(199, 164, 103, 0.10),
+                transparent 28%
+            ),
+            radial-gradient(
+                circle at 0% 100%,
+                rgba(255, 255, 255, 0.035),
+                transparent 27%
+            ),
+            #090a0b;
+
+        /* La navbar NON scrolla */
+        overflow: hidden;
+        overscroll-behavior: none;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateX(100%);
+
+        transition:
+            transform 0.7s cubic-bezier(.76, 0, .24, 1),
+            opacity 0.4s ease,
+            visibility 0.7s;
+
+        -webkit-overflow-scrolling: auto;
+    }
+
+
+    /* ------------------------------------------
+       DECORAZIONE SUPERIORE
+       ------------------------------------------ */
+
+    header nav::before {
+        content: "HPRAM  /  TRIESTE";
+
+        position: absolute;
+
+        top: 42px;
+        left: clamp(26px, 7vw, 52px);
+
+        color: #bc9b62;
+
+        font-size: 9px;
+        font-weight: 500;
+
+        letter-spacing: 0.28em;
+
+        opacity: 0;
+
+        transform: translateY(-5px);
+
+        transition:
+            opacity 0.5s ease 0.4s,
+            transform 0.5s ease 0.4s;
+    }
+
+
+    /* ------------------------------------------
+       SOTTILE DETTAGLIO DECORATIVO
+       ------------------------------------------ */
+
+    header nav::after {
+        content: "";
+
+        position: absolute;
+
+        top: 61px;
+        left: clamp(26px, 7vw, 52px);
+
+        width: 0;
+        height: 1px;
+
+        background: linear-gradient(
+            90deg,
+            #bc9b62,
+            rgba(188, 155, 98, 0)
+        );
+
+        transition:
+            width 0.9s cubic-bezier(.22, 1, .36, 1) 0.35s;
+    }
+
+
+    /* ------------------------------------------
+       NAV APERTA
+       ------------------------------------------ */
+
+    header nav.open {
+        opacity: 1;
+        visibility: visible;
+
+        transform: translateX(0);
+    }
+
+    header nav.open::before {
+        opacity: .75;
+        transform: translateY(0);
+    }
+
+    header nav.open::after {
+        width: 85px;
+    }
+
+
+    /* ------------------------------------------
+       LINKS
+       ------------------------------------------ */
+
+    header nav a {
+        counter-increment: hpram-nav;
+
+        position: relative;
+
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: clamp(13px, 2.3vh, 20px) 4px;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+
+        color: rgba(255, 255, 255, 0.92);
+
+        font-size: clamp(1.45rem, 6vw, 2.3rem);
+        font-weight: 300;
+
+        line-height: 1;
+
+        letter-spacing: -0.02em;
+
+        text-decoration: none;
+
+        opacity: 0;
+
+        transform: translateX(30px);
+
+        transition:
+            opacity 0.55s ease,
+            transform 0.65s cubic-bezier(.22, 1, .36, 1),
+            color 0.3s ease,
+            padding-left 0.35s ease;
+
+        -webkit-tap-highlight-color: transparent;
+    }
+
+
+    /* ------------------------------------------
+       NUMERI 01 / 02 / 03...
+       Generati automaticamente
+       ------------------------------------------ */
+
+    header nav a::before {
+        content: "0" counter(hpram-nav);
+
+        display: inline-flex;
+
+        width: 38px;
+
+        flex: 0 0 38px;
+
+        color: #bc9b62;
+
+        font-size: 9px;
+        font-weight: 500;
+
+        letter-spacing: 0.12em;
+
+        opacity: 0.65;
+
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease;
+    }
+
+
+    /* ------------------------------------------
+       INDICATORE A DESTRA
+       ------------------------------------------ */
+
+    header nav a::after {
+        content: "";
+
+        position: absolute;
+
+        right: 5px;
+
+        width: 5px;
+        height: 5px;
+
+        border-top: 1px solid #c5a56c;
+        border-right: 1px solid #c5a56c;
+
+        opacity: 0;
+
+        transform:
+            translateX(-10px)
+            rotate(45deg);
+
+        transition:
+            opacity 0.3s ease,
+            transform 0.35s ease;
+    }
+
+
+    /* ------------------------------------------
+       INTERAZIONE
+       ------------------------------------------ */
+
+    header nav a:hover,
+    header nav a:focus-visible {
+        color: #d5b77e;
+        padding-left: 7px;
+    }
+
+    header nav a:hover::before,
+    header nav a:focus-visible::before {
+        opacity: 1;
+        transform: translateX(3px);
+    }
+
+    header nav a:hover::after,
+    header nav a:focus-visible::after {
+        opacity: 1;
+
+        transform:
+            translateX(0)
+            rotate(45deg);
+    }
+
+
+    /* ------------------------------------------
+       ANIMAZIONE APERTURA LINK
+       ------------------------------------------ */
+
+    header nav.open a {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    header nav.open a:nth-child(1) {
+        transition-delay: .12s;
+    }
+
+    header nav.open a:nth-child(2) {
+        transition-delay: .17s;
+    }
+
+    header nav.open a:nth-child(3) {
+        transition-delay: .22s;
+    }
+
+    header nav.open a:nth-child(4) {
+        transition-delay: .27s;
+    }
+
+    header nav.open a:nth-child(5) {
+        transition-delay: .32s;
+    }
+
+    header nav.open a:nth-child(6) {
+        transition-delay: .37s;
+    }
+
+    header nav.open a:nth-child(7) {
+        transition-delay: .42s;
+    }
+
+
+    /* ------------------------------------------
+       STATO MENU APERTO
+       ------------------------------------------ */
+
+    body.menu-open .menu {
+        color: #c8a96f;
+
+        border-color: rgba(200, 169, 111, 0.45);
+
+        background: rgba(200, 169, 111, 0.06);
+    }
+
+
+    /* ------------------------------------------
+       ACCESSIBILITA
+       ------------------------------------------ */
+
+    .menu:focus-visible,
+    header nav a:focus-visible {
+        outline: 1px solid #c8a96f;
+        outline-offset: 4px;
+    }
+
+
+
+/* ==========================================================
+   BLOCCO TOTALE DELLO SCROLL
+   ========================================================== */
+
+html.menu-open,
+body.menu-open {
+    overflow: hidden !important;
+
+    height: 100%;
+    max-height: 100%;
+
+    overscroll-behavior: none;
+
+    touch-action: none;
+}
+
+    .intro,
+    .editorial,
+    .contact {
+        grid-template-columns: 1fr
+    }
+
+    .productGrid {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .serviceGrid {
+        grid-template-columns: 1fr
+    }
+
+    .modalGrid {
+        grid-template-columns: 1fr
+    }
+
+    .modalGrid img {
+        height: 50vh
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media(max-width:560px) {
+    .manifesto {
+        flex-wrap: wrap;
+        gap: 15px
+    }
+
+    .portals {
+        grid-template-columns: 1fr
+    }
+
+    .productGrid {
+        grid-template-columns: 1fr
+    }
+
+    .hero h1,
+    .pageHero h1,
+    .intro h2,
+    .city h2,
+    .editorial h2,
+    .category h1,
+    .contact h1,
+    .catalogHero h1 {
+        font-size: 3.5rem
+    }
+
+    .section {
+        padding: 70px 5vw
+    }
+
+    footer {
+        grid-template-columns: 1fr
+    }
+}
+
+/* LUXURY PALETTE OVERRIDE */
+html {
+    background: var(--noir)
+}
+
+body {
+    background: var(--ivory);
+    color: var(--ink)
+}
+
+.demo {
+    background: var(--oldgold) !important;
+    color: var(--noir) !important
+}
+
+header {
+    background: var(--noir) !important;
+    color: #fff !important;
+    border-bottom: 1px solid #c8a57233
+}
+
+.logo i {
+    border-color: var(--champagne) !important;
+    color: var(--champagne) !important
+}
+
+.logo small {
+    color: var(--taupe) !important
+}
+
+.headerCta {
+    border-color: var(--champagne) !important;
+    color: var(--champagne) !important
+}
+
+.hero,
+.pageHero,
+.city {
+    background: var(--noir) !important
+}
+
+.shade,
+.hero:after,
+.pageHero:after,
+.city:after {
+    background:
+        linear-gradient(
+            115deg,
+            rgba(184, 148, 88, .07) 0%,
+            transparent 42%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(4, 5, 6, .96) 0%,
+            rgba(8, 9, 10, .82) 30%,
+            rgba(12, 12, 13, .48) 58%,
+            rgba(5, 6, 7, .10) 82%,
+            rgba(5, 6, 7, .03) 100%
+        ) !important;
+}
+
+.heroCopy>p,
+.pageHero p,
+.eyebrow,
+.catalogHero>p,
+.category p {
+    color: var(--champagne) !important
+}
+
+.hero h1 em {
+    color: #e4c79e !important
+}
+
+.btn.teal {
+    background: var(--champagne) !important;
+    color: var(--noir) !important
+}
+
+.btn.ghost {
+    border-color: var(--champagne) !important;
+    color: #fff !important
+}
+
+.btn.dark {
+    background: var(--espresso) !important;
+    color: #fff !important
+}
+
+.manifesto {
+    background: var(--obsidian) !important
+}
+
+.manifesto i {
+    background: var(--champagne) !important
+}
+
+.textLink {
+    color: var(--bronze) !important;
+    border-color: var(--bronze) !important
+}
+
+.portals {
+    background: var(--noir) !important
+}
+
+.portals a:after {
+    background: linear-gradient(transparent, rgba(7, 7, 7, .94)) !important
+}
+
+.portals small {
+    color: var(--champagne) !important
+}
+
+.catalogHero {
+    background: linear-gradient(135deg, var(--noir), var(--espresso) 58%, var(--bronze)) !important
+}
+
+.catalogHero span {
+    color: #eadcca !important
+}
+
+.catalogArea,
+.filtered,
+.section {
+    background: var(--ivory) !important
+}
+
+.tools {
+    border-color: var(--taupe) !important
+}
+
+.tools input,
+.tools select {
+    background: var(--porcelain) !important;
+    border: 1px solid var(--taupe) !important;
+    color: var(--ink) !important
+}
+
+#filters button {
+    border-color: var(--taupe) !important;
+    color: var(--espresso) !important
+}
+
+#filters button.active {
+    background: var(--espresso) !important;
+    color: #fff !important;
+    border-color: var(--espresso) !important
+}
+
+.photo {
+    background: #e7ded1 !important
+}
+
+.badge {
+    background: var(--noir) !important;
+    color: var(--champagne) !important
+}
+
+.metaCard small,
+#count,
+.contact dt {
+    color: var(--bronze) !important
+}
+
+.metaCard button {
+    color: var(--espresso) !important
+}
+
+.category.jewelry {
+    background-image: linear-gradient(#07070744, #070707dd), url('../assets/images/sculptural.jpg') !important
+}
+
+.category.watches {
+    background-image: linear-gradient(#07070744, #070707dd), url('../assets/images/watches.jpg') !important
+}
+
+.serviceGrid {
+    background: var(--champagne) !important
+}
+
+.serviceGrid article {
+    background: var(--ivory) !important
+}
+
+.serviceGrid b {
+    color: var(--oldgold) !important
+}
+
+.contact {
+    background: var(--ivory) !important
+}
+
+.contact>div {
+    background: var(--ivory) !important
+}
+
+.contact a {
+    color: var(--espresso) !important
+}
+
+.notice {
+    color: #78695f !important
+}
+
+footer {
+    background: var(--noir) !important;
+    color: var(--taupe) !important;
+    border-top: 1px solid #c8a57233
+}
+
+footer a {
+    color: #e7d8c3 !important
+}
+
+dialog {
+    background: var(--ivory) !important
+}
+
+dialog::backdrop {
+    background: #070707e8 !important
+}
+
+.modalGrid dl div {
+    border-color: var(--taupe) !important
+}
+
+@media(max-width:1000px) {
+    header nav.open {
+        background: var(--obsidian) !important
+    }
+}
+
+
+/* =========================================================
+   HPRAM JEWELRY - PREMIUM PRODUCT MODAL
+   ========================================================= */
+
+#modal {
+    position: fixed;
+    inset: 0;
+
+    width: min(1120px, calc(100% - 48px));
+    max-width: 1120px;
+    max-height: min(820px, calc(100dvh - 48px));
+
+    margin: auto;
+    padding: 0;
+
+    border: 0;
+    border-radius: 2px;
+
+    background: #f5f3ef;
+    color: #101112;
+
+    box-shadow:
+        0 40px 100px rgba(0, 0, 0, 0.4),
+        0 10px 35px rgba(0, 0, 0, 0.18);
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   BACKDROP
+   ========================= */
+
+#modal::backdrop {
+    background: rgba(4, 6, 8, 0.78);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* =========================
+   OPEN ANIMATION
+   ========================= */
+
+#modal[open] {
+    animation: modalIn .5s cubic-bezier(.22, 1, .36, 1);
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(.985);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================
+   GRID
+   ========================= */
+
+#modal .modalGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(380px, .92fr);
+
+    min-height: 650px;
+}
+
+
+/* =========================
+   PRODUCT IMAGE
+   ========================= */
+
+#modal .modalGrid > img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 650px;
+
+    object-fit: cover;
+    object-position: center;
+
+    background: #e6e2dc;
+}
+
+
+/* =========================
+   CONTENT
+   ========================= */
+
+#modal .modalGrid > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: clamp(45px, 5vw, 75px);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(190, 158, 100, .04),
+            transparent 35%
+        ),
+        #f5f3ef;
+}
+
+
+/* =========================
+   CATEGORY / META
+   ========================= */
+
+#modal .meta {
+    margin: 0 0 18px;
+
+    color: #96794c;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    letter-spacing: .26em;
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   PRODUCT NAME
+   ========================= */
+
+#modal h2 {
+    margin: 0 0 14px;
+
+    color: #111214;
+
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 300;
+
+    line-height: .98;
+
+    letter-spacing: -.045em;
+}
+
+
+/* =========================
+   PRICE
+   ========================= */
+
+#modal strong {
+    display: block;
+
+    margin: 0 0 28px;
+
+    color: #9b7c4a;
+
+    font-size: .88rem;
+    font-weight: 500;
+
+    letter-spacing: .08em;
+}
+
+
+/* =========================
+   DESCRIPTION
+   ========================= */
+
+#modal .desc {
+    max-width: 420px;
+
+    margin: 0 0 34px;
+
+    color: #64615d;
+
+    font-size: .95rem;
+    font-weight: 400;
+
+    line-height: 1.75;
+}
+
+
+/* =========================
+   PRODUCT DATA
+   ========================= */
+
+#modal dl {
+    margin: 0 0 36px;
+    padding: 0;
+
+    border-top: 1px solid rgba(17, 18, 20, .12);
+}
+
+#modal dl > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid rgba(17, 18, 20, .12);
+}
+
+#modal dt {
+    color: #77736d;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+#modal dd {
+    margin: 0;
+
+    color: #18191a;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: .1em;
+}
+
+
+/* =========================
+   CTA
+   ========================= */
+
+#modal .phone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 19px 22px;
+
+    border: 1px solid #111315;
+
+    border-radius: 0;
+
+    background: #111315;
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: .16em;
+
+    text-decoration: none;
+
+    transition:
+        background .35s ease,
+        color .35s ease,
+        border-color .35s ease,
+        transform .3s ease;
+}
+
+
+/* Freccia creata senza modificare HTML */
+
+#modal .phone::after {
+    content: "→";
+
+    color: #cfad72;
+
+    font-size: 17px;
+
+    transition: transform .35s ease;
+}
+
+#modal .phone:hover {
+    background: #202124;
+    border-color: #202124;
+}
+
+#modal .phone:hover::after {
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   CLOSE BUTTON
+   ========================= */
+
+#modal .close {
+    position: absolute;
+
+    top: 22px;
+    right: 22px;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    border: 1px solid rgba(0, 0, 0, .12);
+    border-radius: 50%;
+
+    background: rgba(245, 243, 239, .85);
+    color: #111;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        color .35s ease;
+}
+
+#modal .close:hover {
+    transform: rotate(90deg);
+
+    background: #111315;
+    color: #fff;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    #modal {
+        width: calc(100% - 30px);
+        max-height: calc(100dvh - 30px);
+    }
+
+    #modal .modalGrid {
+        grid-template-columns: 1fr 1fr;
+
+        min-height: 580px;
+    }
+
+    #modal .modalGrid > img {
+        min-height: 580px;
+    }
+
+    #modal .modalGrid > div {
+        padding: 45px 35px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE - PREMIUM FULLSCREEN PRODUCT VIEW
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    #modal {
+        inset: 0;
+
+        width: 100%;
+        max-width: none;
+
+        height: 100dvh;
+        max-height: 100dvh;
+
+        margin: 0;
+
+        border-radius: 0;
+
+        overflow: hidden;
+    }
+
+
+    /* -------------------------
+       MOBILE LAYOUT
+       ------------------------- */
+
+    #modal .modalGrid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 43dvh 57dvh;
+
+        width: 100%;
+        height: 100dvh;
+
+        min-height: 0;
+
+        overflow: hidden;
+    }
+
+
+    /* -------------------------
+       PRODUCT IMAGE
+       ------------------------- */
+
+    #modal .modalGrid > img {
+        width: 100%;
+        height: 43dvh;
+        min-height: 0;
+
+        object-fit: cover;
+        object-position: center;
+
+        border: 0;
+    }
+
+
+    /* -------------------------
+       MOBILE CONTENT
+       ------------------------- */
+
+    #modal .modalGrid > div {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        height: 57dvh;
+
+        box-sizing: border-box;
+
+        padding:
+            27px
+            24px
+            max(22px, env(safe-area-inset-bottom));
+
+        background: #f5f3ef;
+
+        overflow-y: auto;
+
+        overscroll-behavior: contain;
+
+        scrollbar-width: none;
+    }
+
+    #modal .modalGrid > div::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    /* -------------------------
+       META
+       ------------------------- */
+
+    #modal .meta {
+        margin-bottom: 11px;
+
+        font-size: 8px;
+
+        letter-spacing: .24em;
+    }
+
+
+    /* -------------------------
+       TITLE
+       ------------------------- */
+
+    #modal h2 {
+        margin-bottom: 10px;
+
+        font-size: clamp(1.9rem, 9vw, 2.7rem);
+
+        line-height: .98;
+
+        letter-spacing: -.04em;
+    }
+
+
+    /* -------------------------
+       PRICE
+       ------------------------- */
+
+    #modal strong {
+        margin-bottom: 17px;
+
+        font-size: .8rem;
+    }
+
+
+    /* -------------------------
+       DESCRIPTION
+       ------------------------- */
+
+    #modal .desc {
+        margin-bottom: 20px;
+
+        font-size: .85rem;
+
+        line-height: 1.6;
+    }
+
+
+    /* -------------------------
+       PRODUCT CODE
+       ------------------------- */
+
+    #modal dl {
+        margin-bottom: 21px;
+    }
+
+    #modal dl > div {
+        padding: 13px 0;
+    }
+
+    #modal dt {
+        font-size: 8px;
+    }
+
+    #modal dd {
+        font-size: 9px;
+    }
+
+
+    /* -------------------------
+       CTA
+       ------------------------- */
+
+    #modal .phone {
+        min-height: 52px;
+
+        margin-top: auto;
+
+        padding: 16px 18px;
+
+        font-size: 9px;
+
+        letter-spacing: .13em;
+    }
+
+
+    /* -------------------------
+       CLOSE ON IMAGE
+       ------------------------- */
+
+    #modal .close {
+        position: fixed;
+
+        top: max(18px, env(safe-area-inset-top));
+        right: 18px;
+
+        width: 43px;
+        height: 43px;
+
+        border-color: rgba(255, 255, 255, .35);
+
+        background: rgba(10, 11, 12, .55);
+        color: #fff;
+
+        box-shadow: 0 5px 24px rgba(0, 0, 0, .15);
+
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   es. iPhone SE / display bassi
+   ========================================================= */
+
+@media (max-width: 650px) and (max-height: 700px) {
+
+    #modal .modalGrid {
+        grid-template-rows: 36dvh 64dvh;
+    }
+
+    #modal .modalGrid > img {
+        height: 36dvh;
+    }
+
+    #modal .modalGrid > div {
+        height: 64dvh;
+
+        padding-top: 22px;
+    }
+
+    #modal h2 {
+        font-size: 1.85rem;
+    }
+
+    #modal .desc {
+        line-height: 1.5;
+        margin-bottom: 14px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+#modal .close:focus-visible,
+#modal .phone:focus-visible {
+    outline: 1px solid #c5a56c;
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #modal[open],
+    #modal .close,
+    #modal .phone,
+    #modal .phone::after {
+        animation: none;
+        transition: none;
+    }
+}
+
+#modal .modalGrid > div {
+    overflow: hidden;
+}
+

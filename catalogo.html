@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Hpram Jewelry a Trieste: gioielli, orologi e argenteria.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="config/data.js" defer></script>
+    <script src="js/site.js" defer></script>
+    <title>Catalogo Demo | Hpram Jewelry</title>
+</head>
+
+<body>
+    <!-- <div class="demo">CONCEPT DIMOSTRATIVO · PRODOTTI E PREZZI NON REALI</div> -->
+       <header><a class="logo" href="index.html"><i>H</i><span>HPRAM<small>JEWELRY · TRIESTE</small></span></a><button
+            class="menu">MENU</button>
+        <nav><a href="index.html">HOME</a><a href="boutique.html">BOUTIQUE</a><a href="catalogo.html">CATALOGO</a>
+            <!-- <a href="gioielli.html">GIOIELLI</a><a href="orologi.html">OROLOGI</a> -->
+                <a href="servizi.html">SERVIZI</a><a
+                href="contatti.html">CONTATTI</a></nav><a class="headerCta" href="contatti.html">INFORMAZIONI</a>
+    </header>
+    <main>
+        <section class="catalogHero">
+            <p>CATALOGO</p>
+            <h1>Gioielli e orologi.</h1>
+            <!-- <span>Prodotti, nomi, disponibilità e prezzi sono fittizi e creati per la demo.</span> -->
+        </section>
+        <section class="catalogArea">
+            <div class="tools"><input id="search" placeholder="Cerca prodotto o collezione">
+                <div id="filters"></div><select id="sort">
+                    <option value="featured">In evidenza</option>
+                    <option value="low">Prezzo crescente</option>
+                    <option value="high">Prezzo decrescente</option>
+                    <option value="az">Nome A-Z</option>
+                </select>
+            </div>
+            <div id="count"></div>
+            <div id="grid" class="productGrid"></div>
+            <p id="empty">Nessun prodotto trovato.</p>
+        </section>
+    </main>
+<dialog id="modal">
+    <button
+        class="close"
+        type="button"
+        aria-label="Chiudi scheda prodotto"
+    >
+        ×
+    </button>
+
+    <div class="modalGrid">
+        <img src="" alt="">
+
+        <div class="modalContent">
+            <p class="meta"></p>
+
+            <h2></h2>
+
+            <strong class="price"></strong>
+
+            <p class="desc"></p>
+
+            <dl>
+                <div>
+                    <dt>Codice demo</dt>
+                    <dd class="code"></dd>
+                </div>
+            </dl>
+
+            <a href="contatti.html" class="btn dark cont">
+                RICHIEDI INFORMAZIONI
+            </a>
+        </div>
+    </div>
+</dialog>
+    <footer>
+        <div class="logo"><i>H</i><span>HPRAM<small>JEWELRY · TRIESTE</small></span></div>
+        <div><b>LINK</b><a href="boutique.html">Boutique</a><a href="catalogo.html">Catalogo</a><a
+                href="servizi.html">Servizi</a></div>
+        <div><b><a href="contatti.html">CONTATTI</a></b>
+            <p data-key="address"></p><a class="phoneNumber"></a>
+        </div>
+        <p>© <span id="year"></span> Hpram Jewelry · Concept demo</p>
+    </footer>
+</body>
+
+</html>
