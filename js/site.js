@@ -27,6 +27,7 @@ document.querySelectorAll(".cont").forEach((e) => {
 });
 
 const cleanPhone = S.phone.replace(/[^\d+]/g, "");
+const email = S.email;
 
 document.querySelectorAll(".phoneNumber").forEach((el) => {
   el.textContent = S.phone;
@@ -35,6 +36,10 @@ document.querySelectorAll(".phoneNumber").forEach((el) => {
 
 document.querySelectorAll(".phoneLink").forEach((el) => {
   el.href = `tel:${cleanPhone}`;
+});
+
+document.querySelectorAll(".emailLink").forEach((el) => {
+  el.href = `mailto:${email}?subject=${encodeURIComponent("Richiesta informazioni - Hpram Jewelry")}`;
 });
 
 const h = document.querySelector("#hours");
